@@ -10,17 +10,19 @@ source:
     md5: 5de72a6b8e4cc071ca2154fadf3681e3
 
 build:
-    number: 0
+    number: 1
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
     build:
         - python
         - setuptools
-        - h5py
+        # This pins to the default channel version as conda-forge's h5py (hdf5) is incompatible with libnetcdf at the moment.
+        - h5py 2.6.0 np{{ np }}py{{ py }}_0
     run:
         - python
-        - h5py
+        # This pins to the default channel version as conda-forge's h5py (hdf5) is incompatible with libnetcdf at the moment.
+        - h5py 2.6.0 np{{ np }}py{{ py }}_0
 
 test:
     imports:
@@ -28,7 +30,7 @@ test:
 
 about:
     home: https://github.com/shoyer/h5netcdf
-    license: BSD License
+    license: BSD-3-Clause
     summary: netCDF4 via h5py
 
 extra:
