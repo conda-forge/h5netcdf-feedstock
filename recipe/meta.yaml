@@ -17,11 +17,10 @@ requirements:
     build:
         - python
         - setuptools
-        # This pins to the default channel version as conda-forge's h5py (hdf5) is incompatible with libnetcdf at the moment.
-        - h5py 2.6.0 np{{ np }}py{{ py }}_0
     run:
         - python
         # This pins to the default channel version as conda-forge's h5py (hdf5) is incompatible with libnetcdf at the moment.
+        - numpy x.x
         - h5py 2.6.0 np{{ np }}py{{ py }}_0
 
 test:
