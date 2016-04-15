@@ -3,7 +3,7 @@ About h5netcdf
 
 Home: https://github.com/shoyer/h5netcdf
 
-Package license: BSD License
+Package license: BSD-3-Clause
 
 Feedstock license: BSD
 
@@ -72,6 +72,11 @@ Current build status
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/h5netcdf-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/h5netcdf-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/h5netcdf-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/h5netcdf-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/h5netcdf-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/h5netcdf-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/h5netcdf/badges/version.svg)](https://anaconda.org/conda-forge/h5netcdf)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/h5netcdf/badges/downloads.svg)](https://anaconda.org/conda-forge/h5netcdf)
 
 
 Updating h5netcdf-feedstock
