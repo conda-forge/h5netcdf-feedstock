@@ -29,6 +29,7 @@ test:
     - pip
   commands:
     - pip list
+    - pip check
   imports:
     - h5netcdf
 
