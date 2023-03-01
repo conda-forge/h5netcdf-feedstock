@@ -9,7 +9,7 @@ source:
   sha256: 932c3b573bed7370ebfc9e802cd60f1a4da5236efb11b36eeff897324d76bf56
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -18,12 +18,18 @@ requirements:
     - python >=3.6
     - pip
     - h5py
+    - setuptools_scm
   run:
     - python >=3.6
     - h5py
     - packaging
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip list
+    - pip check
   imports:
     - h5netcdf
 
