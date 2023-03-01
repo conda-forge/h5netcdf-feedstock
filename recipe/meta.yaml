@@ -27,7 +27,7 @@ requirements:
 test:
   requires:
     - pip
-  command:
+  commands:
     - pip list
   imports:
     - h5netcdf
