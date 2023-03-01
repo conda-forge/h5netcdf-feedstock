@@ -25,6 +25,10 @@ requirements:
     - packaging
 
 test:
+  requires:
+    - pip
+  command:
+    - pip list
   imports:
     - h5netcdf
 
