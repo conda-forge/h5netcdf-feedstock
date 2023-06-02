@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: h5netcdf
@@ -6,35 +6,34 @@ package:
 
 source:
   url: https://pypi.io/packages/source/h/h5netcdf/h5netcdf-{{ version }}.tar.gz
-  sha256: 932c3b573bed7370ebfc9e802cd60f1a4da5236efb11b36eeff897324d76bf56
+  sha256: 7f6b2733bde06ea2575b79a6450d9bd5c38918ff4cb2a355bf22bbe8c86c6bcf
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
+    - setuptools >=42
+    - setuptools-scm >=7.0
     - pip
-    - h5py
-    - setuptools_scm
   run:
-    - python >=3.6
+    - python >=3.9
     - h5py
     - packaging
 
 test:
-  requires:
-    - pip
-  commands:
-    - pip list
-    - pip check
   imports:
     - h5netcdf
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/shoyer/h5netcdf
+  home: https://github.com/h5netcdf/h5netcdf
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Pythonic interface to netCDF4 via h5py
