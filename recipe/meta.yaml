@@ -15,12 +15,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - pip
     - h5py
     - setuptools_scm
   run:
-    - python >=3.6
+    - python >=3.9
     - h5py
     - packaging
 
@@ -34,7 +34,7 @@ test:
     - h5netcdf
 
 about:
-  home: https://github.com/shoyer/h5netcdf
+  home: https://github.com/h5netcdf/h5netcdf
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Pythonic interface to netCDF4 via h5py
