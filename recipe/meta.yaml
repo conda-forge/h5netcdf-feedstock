@@ -16,22 +16,21 @@ build:
 requirements:
   host:
     - python >=3.9
+    - setuptools >=42
+    - setuptools-scm >=7.0
     - pip
-    - h5py
-    - setuptools_scm
   run:
     - python >=3.9
     - h5py
     - packaging
 
 test:
-  requires:
-    - pip
-  commands:
-    - pip list
-    - pip check
   imports:
     - h5netcdf
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/h5netcdf/h5netcdf
