@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/h/h5netcdf/h5netcdf-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/h/h5netcdf/h5netcdf-{{ version }}.tar.gz
   sha256: 7c8401ab807ff37c9798edc90d99467595892e6c541a5d5abeb8f53aab5335fe
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
 
