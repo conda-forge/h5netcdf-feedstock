@@ -149,6 +149,3 @@ Feedstock Maintainers
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@shoyer](https://github.com/shoyer/)
 
-
-<!-- dummy commit to enable rerendering -->
-
