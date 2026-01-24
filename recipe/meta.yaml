@@ -1,5 +1,5 @@
 {% set python_min = "3.9" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: h5netcdf
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/h/h5netcdf/h5netcdf-{{ version }}.tar.gz
-  sha256: 868704c865bddae87f7dc0f2b5d0c25534e306b7dfd06ef11196407b841dfa9b
+  sha256: 9b396a4cc346050fc1a4df8523bc1853681ec3544e0449027ae397cb953c7a16
 
 build:
   number: 0
@@ -21,6 +21,7 @@ requirements:
     - setuptools-scm >=7.0
     - pip
   run:
+    - numpy
     - python >={{ python_min }}
     - h5py
     - packaging
