@@ -3,11 +3,13 @@ About h5netcdf-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/h5netcdf-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/h5netcdf/h5netcdf
+Home: https://pypi.org/project/h5netcdf/
 
 Package license: BSD-3-Clause
 
-Summary: Pythonic interface to netCDF4 via h5py
+Summary: netCDF4 via h5py
+
+Development: https://github.com/h5netcdf/h5netcdf
 
 Current build status
 ====================
