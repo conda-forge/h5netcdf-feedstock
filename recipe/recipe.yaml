@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.8.2"
+  version: 1.8.3
 
 package:
   name: h5netcdf
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/h/h5netcdf/h5netcdf-${{ version }}.tar.gz
-  sha256: 3c34102269d99f7631d6529ff7a3067f51677f23ebf14669da1dc795af1caac5
+  sha256: 95b5d1972894a28f3237aa6497fd34d365610c22880803c2640b0b49dcae85da
 
 build:
   number: 0
@@ -24,10 +24,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - h5py
     - packaging
     - numpy
-
 tests:
   - python:
       imports:
@@ -35,7 +33,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   summary: netCDF4 via h5py
