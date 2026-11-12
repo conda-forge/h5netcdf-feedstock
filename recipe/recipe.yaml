@@ -12,7 +12,7 @@ source:
   sha256: 95b5d1972894a28f3237aa6497fd34d365610c22880803c2640b0b49dcae85da
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -26,6 +26,7 @@ requirements:
     - python >=${{ python_min }}
     - packaging
     - numpy
+    - h5py
 tests:
   - python:
       imports:
@@ -34,6 +35,14 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - '*'
+  - files:
+      recipe:
+        - test_default_backend.py
+    requirements:
+      run:
+        - python
+    script:
+      - python test_default_backend.py
 
 about:
   summary: netCDF4 via h5py
