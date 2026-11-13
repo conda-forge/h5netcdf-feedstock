@@ -3,7 +3,7 @@ schema_version: 1
 context:
   version: 1.8.3
 
-package:
+recipe:
   name: h5netcdf
   version: ${{ version }}
 
@@ -12,28 +12,69 @@ source:
   sha256: 95b5d1972894a28f3237aa6497fd34d365610c22880803c2640b0b49dcae85da
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
 
-requirements:
-  host:
-    - python ${{ python_min }}.*
-    - setuptools >=42
-    - setuptools-scm >=7.0
-    - pip
-  run:
-    - python >=${{ python_min }}
-    - packaging
-    - numpy
-tests:
-  - python:
-      imports:
-        - h5netcdf
-      pip_check: true
-      python_version:
-        - ${{ python_min }}.*
-        - '*'
+outputs:
+  - package:
+      name: h5netcdf
+    build:
+      noarch: python
+      script: ${{ PYTHON }} -m pip install . -vv
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - setuptools >=42
+        - setuptools-scm >=7.0
+        - pip
+      run:
+        - python >=${{ python_min }}
+        - packaging
+        - numpy
+    tests:
+      - python:
+          imports:
+            - h5netcdf
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
+
+  - package:
+      name: h5netcdf-h5py
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - ${{ pin_subpackage("h5netcdf", exact=True) }}
+        - h5py
+    tests:
+      - python:
+          pip_check: true
+
+  - package:
+      name: h5netcdf-pyfive
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - ${{ pin_subpackage("h5netcdf", exact=True) }}
+        - pyfive
+    tests:
+      - python:
+          pip_check: true
+
+  - package:
+      name: h5netcdf-h5pyd
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - ${{ pin_subpackage("h5netcdf", exact=True) }}
+        - h5pyd
+    tests:
+      - python:
+          pip_check: true
 
 about:
   summary: netCDF4 via h5py

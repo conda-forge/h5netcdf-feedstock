@@ -31,6 +31,9 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-h5netcdf-green.svg)](https://anaconda.org/conda-forge/h5netcdf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/h5netcdf.svg)](https://anaconda.org/conda-forge/h5netcdf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/h5netcdf.svg)](https://anaconda.org/conda-forge/h5netcdf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/h5netcdf.svg)](https://anaconda.org/conda-forge/h5netcdf) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-h5netcdf--h5py-green.svg)](https://anaconda.org/conda-forge/h5netcdf-h5py) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/h5netcdf-h5py.svg)](https://anaconda.org/conda-forge/h5netcdf-h5py) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/h5netcdf-h5py.svg)](https://anaconda.org/conda-forge/h5netcdf-h5py) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/h5netcdf-h5py.svg)](https://anaconda.org/conda-forge/h5netcdf-h5py) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-h5netcdf--h5pyd-green.svg)](https://anaconda.org/conda-forge/h5netcdf-h5pyd) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/h5netcdf-h5pyd.svg)](https://anaconda.org/conda-forge/h5netcdf-h5pyd) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/h5netcdf-h5pyd.svg)](https://anaconda.org/conda-forge/h5netcdf-h5pyd) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/h5netcdf-h5pyd.svg)](https://anaconda.org/conda-forge/h5netcdf-h5pyd) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-h5netcdf--pyfive-green.svg)](https://anaconda.org/conda-forge/h5netcdf-pyfive) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/h5netcdf-pyfive.svg)](https://anaconda.org/conda-forge/h5netcdf-pyfive) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/h5netcdf-pyfive.svg)](https://anaconda.org/conda-forge/h5netcdf-pyfive) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/h5netcdf-pyfive.svg)](https://anaconda.org/conda-forge/h5netcdf-pyfive) |
 
 Installing h5netcdf
 ===================
@@ -49,7 +52,7 @@ How to use
 <summary>With conda</summary>
 
 ```
-conda install h5netcdf
+conda install h5netcdf h5netcdf-h5py h5netcdf-h5pyd h5netcdf-pyfive
 ```
 
 </details>
@@ -58,7 +61,7 @@ conda install h5netcdf
 <summary>With mamba</summary>
 
 ```
-mamba install h5netcdf
+mamba install h5netcdf h5netcdf-h5py h5netcdf-h5pyd h5netcdf-pyfive
 ```
 
 </details>
@@ -68,9 +71,9 @@ mamba install h5netcdf
 
 ```
 # for adding to your local project
-pixi add h5netcdf
+pixi add h5netcdf h5netcdf-h5py h5netcdf-h5pyd h5netcdf-pyfive
 # for installing globally
-pixi global install h5netcdf
+pixi global install h5netcdf h5netcdf-h5py h5netcdf-h5pyd h5netcdf-pyfive
 ```
 
 </details>
